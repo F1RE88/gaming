@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        /* General Page Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #1e1e2f 0%, #0f0f1a 100%);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Container for the buttons */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        /* Styling the anchor links to behave like blocks */
+        .btn-link {
+            text-decoration: none;
+            width: 100%;
+        }
+
+        /* The Custom Animated Button */
+        .game-btn {
+            width: 100%;
+            padding: 16px 24px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background: linear-gradient(135deg, #2c2c44 0%, #1a1a2e 100%);
+            border: 2px solid #3f3f5f;
+            border-radius: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            
+            /* Align icon and text beautifully */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px; 
+        }
+
+        /* Adjust icon size slightly */
+        .game-btn i {
+            font-size: 1.2rem;
+        }
+
+        /* Subtle glow line at the top of the button */
+        .game-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        /* Hover Effects (Animation & Glow) */
+        .game-btn:hover {
+            transform: translateY(-4px); /* Lift up effect */
+            border-color: #00ffcc; /* Neon cyan border */
+            color: #00ffcc;
+            box-shadow: 0 8px 25px rgba(0, 255, 204, 0.3); /* Bright neon glow */
+        }
+
+        .game-btn:hover::before {
+            transform: translateX(100%); /* Shimmer shine effect across the button */
+        }
+
+        /* Click/Active Effect */
+        .game-btn:active {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(0, 255, 204, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <a class="btn-link" href="https://play.geforcenow.com/">
+            <button class="game-btn"><i class="fa-solid fa-bolt"></i> GeForce Now</button>
+        </a>
+        <a class="btn-link" href="https://gam.onl/">
+            <button class="game-btn"><i class="fa-solid fa-gamepad"></i> Gam.onl</button>
+        </a>
+        <a class="btn-link" href="http://crazygames.com/">
+            <button class="game-btn"><i class="fa-solid fa-fire"></i> Crazy Games</button>
+        </a>
+        <a class="btn-link" href="https://now.gg/">
+            <button class="game-btn"><i class="fa-solid fa-play"></i> Now GG</button>
+        </a>
+        <a class="btn-link" href="https://web.cloudmoonapp.com/ar/">
+            <button class="game-btn"><i class="fa-solid fa-cloud-moon"></i> Cloud Moon</button>
+        </a>
+    </div>
+
+</body>
+</html>
